@@ -1,4 +1,5 @@
 class User {
+  transaction: Transaction[] = [];
   constructor(private readonly name: string, private readonly id: string) {}
 }
 
@@ -11,3 +12,5 @@ class Transaction {
 
 const user = new User("saba", "123");
 const transaction = new Transaction(user, new Date());
+
+user.transaction.push(transaction);
